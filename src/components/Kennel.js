@@ -1,6 +1,7 @@
 import React from "react"
 import "./Kennel.css"
-import { Animal } from "./animal/Animal"
+import { AnimalList } from "./animal/AnimalList"
+import { AnimalProvider } from "./animal/AnimalProvider"
 import "./animal/Animal.css"
 import { Customer } from "./customer/Customer"
 import "./customer/Customer.css"
@@ -20,11 +21,9 @@ export const Kennel = () => (
         </address>
 
         <h2>Animals</h2>
-        <article className="animals">
-            <Animal />
-            <Animal />
-            <Animal />
-        </article>
+        <AnimalProvider>
+            <AnimalList />
+        </AnimalProvider>
 
         <h2>Customers</h2>
         <article className="customers">
