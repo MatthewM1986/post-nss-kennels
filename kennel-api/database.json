@@ -6,6 +6,20 @@
             "breed": "Poodle",
             "customerId": 1,
             "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Lilly",
+            "breed": "Beagle",
+            "customerId": 2,
+            "locationId": 2
+        },
+        {
+            "id": 3,
+            "name": "Maggie",
+            "breed": "Tabby",
+            "customerId": 3,
+            "locationId": 2
         }
     ],
     "customers": [
@@ -13,9 +27,40 @@
             "id": 1,
             "name": "Hannah Hall",
             "address": "7002 Chestnut Ct"
+        },
+        {
+            "id": 2,
+            "name": "Dylana Miller",
+            "address": "119 Heathcote"
+        },
+        {
+            "id": 3,
+            "name": "Haley Miller",
+            "address": "956 Windsor Green"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Jeremy Bakker",
+            "locationId": 2
+        },
+        {
+            "id": 2,
+            "name": "Melissa Pinhal",
+            "locationId": 2
+        },
+        {
+            "id": 3,
+            "name": "Jessica Cleveland",
+            "locationId": 1
+        },
+        {
+            "id": 4,
+            "name": "Keri Simpson",
+            "locationId": 1
+        }
+    ],
     "locations": [
         {
             "id": 1,
