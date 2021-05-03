@@ -37,9 +37,15 @@ export const ApplicationViews = (props) => {
             </CustomerProvider>
 
             <EmployeeProvider>
-                <Route path="/employees">
-                    <EmployeeList />
-                </Route>
+                <LocationProvider>
+                    <Route exact path="/employees" render={
+                        props => <EmployeeList {...props} />
+                    } />
+
+                    <Route exact path="/employees/create" render={
+                        props => <EmployeeForm {...props} />
+                    } />
+                </LocationProvider>
             </EmployeeProvider>
         </>
     )
