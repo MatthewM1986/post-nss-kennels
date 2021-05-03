@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
 import { LocationContext } from "../location/LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
-import "./Employees.css"
+import "./Employee.css"
 
 export const EmployeeForm = (props) => {
     const { addEmployee } = useContext(EmployeeContext)
