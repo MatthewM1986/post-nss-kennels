@@ -18,7 +18,9 @@ export const AnimalForm = (props) => {
         No more `document.querySelector()` in React.
     */
     const name = useRef(null)
+    const breed = useRef(null)
     const location = useRef(null)
+    const customer = useRef(null)
 
     useEffect(() => {
         getCustomers().then(getLocations)
@@ -39,6 +41,7 @@ export const AnimalForm = (props) => {
         } else {
             addAnimal({
                 name: name.current.value,
+                breed: breed.current.value,
                 locationId,
                 customerId
             })
@@ -53,6 +56,25 @@ export const AnimalForm = (props) => {
                 <div className="form-group">
                     <label htmlFor="animalName">Animal name: </label>
                     <input type="text" id="animalName" ref={name} required autoFocus className="form-control" placeholder="Animal name" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="animalBreed">Animal breed: </label>
+                    <input type="text" id="animalBreed" ref={breed} required autoFocus className="form-control" placeholder="Animal breed" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="customer">Assign to customer: </label>
+                    <select defaultValue="" name="customer" ref={customer} id="animalCustomer" className="form-control" >
+                        <option value="0">Select a customer</option>
+                        {customers.map(c => (
+                            <option key={c.id} value={c.id}>
+                                {c.name}
+                            </option>
+                        ))}
+                    </select>
                 </div>
             </fieldset>
             <fieldset>

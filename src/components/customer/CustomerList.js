@@ -16,13 +16,6 @@ export const CustomerList = () => {
         getCustomers()
     }, [])
 
-    /*
-        This effect is solely for learning purposes. The effect
-        it is responding to is that the location state changed.
-    */
-    useEffect(() => {
-    }, [customers])
-
     return (
         <div className="customers">
             {
