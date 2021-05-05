@@ -16,13 +16,6 @@ export const EmployeeList = (props) => {
         getEmployees()
     }, [])
 
-    /*
-        This effect is solely for learning purposes. The effect
-        it is responding to is that the location state changed.
-    */
-    useEffect(() => {
-    }, [employees])
-
     return (
         <div className="employees">
             <h1>Employees</h1>
