@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
-import { Employee } from "./Employee"
+// import { Employee } from "./Employee"
+import { Link } from "react-router-dom"
 import "./Employee.css"
 
 export const EmployeeList = (props) => {
