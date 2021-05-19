@@ -23,8 +23,18 @@ export const EmployeeList = (props) => {
                 Add Employee
         </button>
             <article className="employeeList">
-                {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
+                {
+                    employees.map(employee => {
+                        return <Link key={employee.id} to={`/employees/${employee.id}`}>
+                            <h3>{employee.name}</h3>
+                        </Link>
+                    })
+                }
             </article>
+            {/* Old Code before adding detail page */}
+            {/* <article className="employeeList">
+                {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
+            </article> */}
         </div>
     )
 }
