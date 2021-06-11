@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { LocationProvider } from "./location/LocationProvider"
 import { AnimalProvider } from "./animal/AnimalProvider"
+import { AnimalDetails } from "./animal/AnimalDetail"
 import { CustomerProvider } from "./customer/CustomerProvider"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { LocationList } from "./location/LocationList"
@@ -40,6 +41,10 @@ export const ApplicationViews = (props) => {
 
                         <Route exact path="/animals/create" render={
                             props => <AnimalForm {...props} />
+                        } />
+
+                        <Route path="/animals/:animalId(\d+)" render={
+                            props => <AnimalDetails {...props} />
                         } />
                     </CustomerProvider>
                 </LocationProvider>
