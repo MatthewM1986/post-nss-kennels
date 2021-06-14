@@ -22,17 +22,18 @@
       "locationId": 2
     },
     {
+      "id": 4,
       "name": "Blue",
-      "locationId": 1,
+      "breed": "Tomcat",
       "customerId": 1,
-      "id": 4
+      "locationId": 1
     },
     {
+      "id": 5,
       "name": "Lady",
       "breed": "German Shepherd",
-      "locationId": 2,
       "customerId": 1,
-      "id": 5
+      "locationId": 2
     }
   ],
   "customers": [
@@ -74,10 +75,9 @@
       "locationId": 1
     },
     {
+      "id": 5,
       "name": "Matthew Machurek",
-      "locationId": 1,
-      "animalId": 2,
-      "id": 5
+      "locationId": 1
     }
   ],
   "locations": [

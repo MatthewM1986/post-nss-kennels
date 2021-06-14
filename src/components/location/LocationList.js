@@ -9,7 +9,7 @@ import "./Location.css"
 export const LocationList = ({ }) => {
     const { getLocations, locations } = useContext(LocationContext)
 
-    // Initialization effect hook -> Go get animal data
+    // Initialization effect hook -> Go get location data
     useEffect(() => {
         getLocations()
     }, [])

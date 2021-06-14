@@ -1,18 +1,18 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { LocationProvider } from "./location/LocationProvider"
 import { AnimalProvider } from "./animal/AnimalProvider"
+import { AnimalList } from "./animal/AnimalList"
 import { AnimalDetails } from "./animal/AnimalDetail"
+import { AnimalForm } from "./animal/AnimalForm"
 import { CustomerProvider } from "./customer/CustomerProvider"
+import { CustomerList } from "./customer/CustomerList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
+import { EmployeeList } from "./employee/EmployeeList"
+import { EmployeeDetail } from "./employee/EmployeeDetail"
+import { EmployeeForm } from "./employee/EmployeeForm"
+import { LocationProvider } from "./location/LocationProvider"
 import { LocationList } from "./location/LocationList"
 import { LocationDetails } from "./location/LocationDetail"
-import { AnimalList } from "./animal/AnimalList"
-import { CustomerList } from "./customer/CustomerList"
-import { EmployeeList } from "./employee/EmployeeList"
-import { EmployeeForm } from "./employee/EmployeeForm"
-import { EmployeeDetail } from "./employee/EmployeeDetail"
-import { AnimalForm } from "./animal/AnimalForm"
 
 export const ApplicationViews = (props) => {
     return (
@@ -21,10 +21,9 @@ export const ApplicationViews = (props) => {
                 <AnimalProvider>
                     <EmployeeProvider>
                         {/* Render the location list when http://localhost:3000/ */}
-                        <Route exact path="/">
-                            <LocationList />
-                        </Route>
-
+                        <Route exact path="/" render={
+                            props => <LocationList {...props} />
+                        } />
                         <Route path="/locations/:locationId(\d+)" render={
                             props => <LocationDetails {...props} />
                         } />
