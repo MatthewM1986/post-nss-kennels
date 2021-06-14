@@ -34,12 +34,6 @@ export const AnimalProvider = (props) => {
             .then(res => res.json())
     }
 
-    /*
-        You return a context provider which has the
-        `locations` state, the `addLocation` function,
-        and the `getLocation` function as keys. This
-        allows any child elements to access them.
-    */
     return (
         <AnimalContext.Provider value={{
             animals, addAnimal, getAnimals, getAnimalById

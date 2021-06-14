@@ -6,7 +6,7 @@ import { AnimalDetails } from "./animal/AnimalDetail"
 import { CustomerProvider } from "./customer/CustomerProvider"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { LocationList } from "./location/LocationList"
-import { LocationDetail } from "./location/LocationDetail"
+import { LocationDetails } from "./location/LocationDetail"
 import { AnimalList } from "./animal/AnimalList"
 import { CustomerList } from "./customer/CustomerList"
 import { EmployeeList } from "./employee/EmployeeList"
@@ -26,7 +26,7 @@ export const ApplicationViews = (props) => {
                         </Route>
 
                         <Route path="/locations/:locationId(\d+)" render={
-                            props => <LocationDetail {...props} />
+                            props => <LocationDetails {...props} />
                         } />
                     </EmployeeProvider>
                 </AnimalProvider>
