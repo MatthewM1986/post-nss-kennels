@@ -6,6 +6,7 @@ export const AnimalDetails = (props) => {
     const { releaseAnimal, getAnimalById } = useContext(AnimalContext)
 
     const [animal, setAnimal] = useState({ location: {}, customer: {} })
+    console.log("animal info", animal)
 
     useEffect(() => {
         const animalId = parseInt(props.match.params.animalId)

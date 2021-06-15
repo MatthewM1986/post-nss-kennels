@@ -4,7 +4,9 @@ import "./Location.css"
 
 export const LocationDetails = (props) => {
     const { getLocationById } = useContext(LocationContext)
+
     const [location, setLocation] = useState({ animal: {}, employee: {} })
+    console.log("location info", location)
 
     useEffect(() => {
         const locationId = parseInt(props.match.params.locationId)
@@ -16,8 +18,8 @@ export const LocationDetails = (props) => {
         <section className="location">
             <h3 className="location__name">{location.name}</h3>
             <div className="location__breed">{location.address}</div>
-            <div className="location__animals">Animal: {location.animal.name}</div>
-            <div className="location__employees">Employee: {location.employee.name}</div>
+            <div className="location__animals">Animal: {location.animals ? location.animals.map(a => a.name).join(", ") : <></>}</div>
+            <div className="location__employees">Employee: {location.employees ? location.employees.map(e => e.name).join(", ") : <></>}</div>
             <button onClick={() => {
                 props.history.push(`/locations/edit/${location.id}`)
             }}>Edit</button>

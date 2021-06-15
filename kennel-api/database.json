@@ -5,13 +5,13 @@
       "name": "Doodles",
       "breed": "Poodle",
       "customerId": 1,
-      "locationId": 2
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Lilly",
       "breed": "Beagle",
-      "customerId": 2,
+      "customerId": 3,
       "locationId": 2
     },
     {
@@ -25,15 +25,15 @@
       "id": 4,
       "name": "Blue",
       "breed": "Tomcat",
-      "customerId": 1,
+      "customerId": 2,
       "locationId": 1
     },
     {
       "id": 5,
       "name": "Lady",
       "breed": "German Shepherd",
-      "customerId": 1,
-      "locationId": 2
+      "customerId": 2,
+      "locationId": 1
     }
   ],
   "customers": [
