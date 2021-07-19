@@ -1,11 +1,12 @@
 import React, { useState, useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
+import { useHistory } from "react-router-dom"
 // import { LocationContext } from "../location/LocationProvider"
 // import { CustomerContext } from "../customer/CustomerProvider"
 import { Animal } from "./Animal"
 import "./Animal.css"
 
-export const AnimalList = ({ history }) => {
+export const AnimalList = () => {
     const { getAnimals, animals, searchTerms } = useContext(AnimalContext)
 
     // Since you are no longer ALWAYS displaying all of the animals

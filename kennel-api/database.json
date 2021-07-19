@@ -40,17 +40,20 @@
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "address": "7002 Chestnut Ct",
+      "email": "hannah@hannah.com"
     },
     {
       "id": 2,
       "name": "Dylana Miller",
-      "address": "119 Heathcote"
+      "address": "119 Heathcote",
+      "email": "dylana@dylana.com"
     },
     {
       "id": 3,
       "name": "Haley Miller",
-      "address": "956 Windsor Green"
+      "address": "956 Windsor Green",
+      "email": "haley@haley.com"
     }
   ],
   "employees": [
