@@ -6,12 +6,29 @@ import { Animal } from "./Animal"
 import "./Animal.css"
 
 export const AnimalList = ({ history }) => {
-    const { getAnimals, animals } = useContext(AnimalContext)
+    const { getAnimals, animals, searchTerms } = useContext(AnimalContext)
+
+    // Since you are no longer ALWAYS displaying all of the animals
+    const [filteredAnimals, setFiltered] = useState([])
+    const history = useHistory()
 
     // Initialization effect hook -> Go get animal data
     useEffect(() => {
         getAnimals()
     }, [])
+
+    // useEffect dependency array with dependencies - will run if dependency changes (state)
+    // searchTerms will cause a change
+    useEffect(() => {
+        if (searchTerms !== "") {
+            // If the search field is not blank, display matching animals
+            const subset = animals.filter(animal => animal.name.toLowerCase().includes(searchTerms))
+            setFiltered(subset)
+        } else {
+            // If the search field is blank, display all animals
+            setFiltered(animals)
+        }
+    }, [searchTerms, animals])
 
     return (
         <>
@@ -22,7 +39,7 @@ export const AnimalList = ({ history }) => {
             </button>
             <div className="animals">
                 {
-                    animals.map(animal => {
+                    filteredAnimals.map(animal => {
                         return <Animal key={animal.id} animal={animal} />
                     })
                 }
