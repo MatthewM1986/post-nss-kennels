@@ -15,6 +15,8 @@ import { LocationProvider } from "./location/LocationProvider"
 import { LocationList } from "./location/LocationList"
 import { LocationDetails } from "./location/LocationDetail"
 
+
+
 export const ApplicationViews = (props) => {
     return (
         <>
